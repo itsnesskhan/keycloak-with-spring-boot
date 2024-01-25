@@ -1,0 +1,41 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/keyclockdb
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+        format_sql: true
+    show-sql: true
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/oauth_login
+#        opaque-token:
+#          client-id: springboot-keyclock
+#          client-secret: z24AH7bB10CiiRygNFMezcWiYuQT8gve
+#          introspection-uri: http://localhost:8080/realms/oauth_login/protocol/openid-connect/token/introspect
+
+springdoc:
+  swagger-ui:
+    oauth:
+      client-id: springboot-keyclock
+      client-secret: z24AH7bB10CiiRygNFMezcWiYuQT8gve
+
+
+keyloak:
+ realm: oauth_login
+ server_uri:  http://localhost:8080
+ client-id: admin-cli
+ client-secret: z24AH7bB10CiiRygNFMezcWiYuQT8gve 
+ grant-type: password
+ name: admin
+ password: admin

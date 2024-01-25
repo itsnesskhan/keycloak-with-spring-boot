@@ -1,0 +1,32 @@
+{
+  "realm": "oauth_login",
+  "auth-server-url": "http://localhost:8080",
+  "resource": "springboot-keyclock",
+  "credentials": {
+    "secret": "z24AH7bB10CiiRygNFMezcWiYuQT8gve"
+  },
+  "http-method-as-scope": true,
+  "paths" : [
+	{
+		"path": "/api/v1/user/*",
+		"enforcement-mode": "DISABLED"
+	},{
+		"path": "/swagger-ui/*",
+		"enforcement-mode": "DISABLED"
+	},{
+		"path": "/v3/api-docs/*",
+		"enforcement-mode": "DISABLED"
+	},{
+		"path": "/keycloak/users/{userId}",
+		"enforcement-mode": "ENFORCING",
+		"claim-information-point": {
+			"claims": {
+              "uri_claim": "{request.uri}"
+            }
+		}
+	}, {
+		"path": "/keycloak/*",
+		"enforcement-mode": "ENFORCING"
+	}
+	]
+}

@@ -1,0 +1,1 @@
+Insert into roles(rid, roll_name) values(101,'CUSTOMER'),(102,'ADMIN');

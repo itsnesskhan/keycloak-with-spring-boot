@@ -1,0 +1,37 @@
+{"properties": [
+  {
+    "name": "keyloak.realm",
+    "type": "java.lang.String",
+    "description": "A description for 'keyloak.realm'"
+  },
+  {
+    "name": "keyloak.server_uri",
+    "type": "java.lang.String",
+    "description": "A description for 'keyloak.server_uri'"
+  },
+  {
+    "name": "keyloak.client-id",
+    "type": "java.lang.String",
+    "description": "A description for 'keyloak.client-id'"
+  },
+  {
+    "name": "keyloak.client-secret",
+    "type": "java.lang.String",
+    "description": "A description for 'keyloak.client-secret'"
+  },
+  {
+    "name": "keyloak.grant-type",
+    "type": "java.lang.String",
+    "description": "A description for 'keyloak.grant-type'"
+  },
+  {
+    "name": "keyloak.name",
+    "type": "java.lang.String",
+    "description": "A description for 'keyloak.name'"
+  },
+  {
+    "name": "keyloak.password",
+    "type": "java.lang.String",
+    "description": "A description for 'keyloak.password'"
+  }
+]}
